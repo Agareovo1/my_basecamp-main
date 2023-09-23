@@ -1,0 +1,62 @@
+<div class="logo-container">
+  <%= image_tag "new logo.jpg", alt: "Logo", class: "navbar-brand" %>
+</div>
+<div class="container mx-auto">
+  <% if user_signed_in? %>
+  <div class="jumbotron text-center">
+    <h1 class="display-4">COLLABORATE</h1>
+  <p class="lead">A project management tool for developers</p>
+  
+  <% else %>
+  <div class="jumbotron text-center">
+    <h1 class="display-4">COLLABORATE</h1>
+  <p class="lead">A project management tool for developers</p>
+  <div class="row justify-content-center">
+    <div class="col-sm-4">
+      <%# <%= link_to "Sign in", root_path, class: "btn btn-primary btn-block" %>
+      <a href="<%= new_user_registration_path %>" class="btn btn-sign-in btn-block">Sign in</a>
+    </div>
+    <div class="col-sm-4">
+      <%# <%= link_to "Login", root_path, class: "btn btn-login btn-block" %>
+      <a href="<%= new_user_session_path %>" class="btn btn-login btn-block">Login</a>
+    </div>
+    <% end %>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .btn-primary {
+    margin-left: 300px; /* adjust as needed */
+  }
+  .btn-login {
+  margin-right: 300px; /* adjust as needed */
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+ .btn-sign-in {
+  margin-right: 300px; /* adjust as needed */
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+   .container {
+  	margin-top: 50px;
+  }
+    .display-4 {
+      font-weight: bolder;
+    }
+
+    .logo-container {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+
+
+
+
+
+

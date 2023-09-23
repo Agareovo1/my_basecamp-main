@@ -1,0 +1,30 @@
+<div id="<%= dom_id project %>">
+
+
+
+<div class="card w-75">
+  <div class="card-body">
+     <h3><strong><%= current_user.email %></strong></h3>
+    <h5 class="card-title"></h5>
+  </div>
+</div>
+
+
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= project.user.email %></td>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
